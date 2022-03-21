@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.RadiusCrossTieTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MalletParametersPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,12 +111,12 @@
             // 
             // HeadLengthTextBox
             // 
-            this.HeadLengthTextBox.BackColor = System.Drawing.Color.Salmon;
+            this.HeadLengthTextBox.BackColor = System.Drawing.Color.White;
             this.HeadLengthTextBox.Location = new System.Drawing.Point(232, 67);
             this.HeadLengthTextBox.Name = "HeadLengthTextBox";
             this.HeadLengthTextBox.Size = new System.Drawing.Size(43, 20);
             this.HeadLengthTextBox.TabIndex = 33;
-            this.HeadLengthTextBox.Text = "a";
+            this.HeadLengthTextBox.Text = "7";
             // 
             // label9
             // 
@@ -214,6 +216,7 @@
             this.HeadWidthTextBox.Size = new System.Drawing.Size(43, 20);
             this.HeadWidthTextBox.TabIndex = 23;
             this.HeadWidthTextBox.Text = "31";
+            this.toolTip.SetToolTip(this.HeadWidthTextBox, "Высота детали должна быть меньше 30 мм");
             // 
             // label1
             // 
@@ -227,6 +230,7 @@
             // 
             // BuildButton
             // 
+            this.BuildButton.Enabled = false;
             this.BuildButton.Location = new System.Drawing.Point(12, 366);
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(214, 23);
@@ -271,6 +275,10 @@
             this.label7.Size = new System.Drawing.Size(184, 15);
             this.label7.TabIndex = 40;
             this.label7.Text = "Диаметр на стенке детали(Ж)";
+            // 
+            // toolTip
+            // 
+            this.toolTip.ToolTipTitle = "Ошибка ввода";
             // 
             // MainForm
             // 
@@ -334,6 +342,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
 

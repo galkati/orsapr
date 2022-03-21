@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin", "Plugin\Plugin.csproj", "{D41A818B-3D2D-49F5-994B-17BC2514ACF3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrapper", "KompasWrapper\Wrapper.csproj", "{91935FC6-ABDD-4B63-9A87-F4448D48D890}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{B87FF22E-DDD4-45DB-960B-4778C5B6FB01}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginUI", "PluginUI\PluginUI.csproj", "{06BB814B-EA11-4BF2-9DB7-B82CED08C2FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plugin", "Plugin\Plugin.csproj", "{2D760521-52CC-468E-B7A7-96479DF97617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KompasWrapper", "KompasWrapper\KompasWrapper.csproj", "{1A135F3A-DABB-4893-B203-F1E0C981A3EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginUnitTests", "PluginUnitTests\PluginUnitTests.csproj", "{5048F956-7E1A-4DCB-A93D-AB335540A40C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,22 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D41A818B-3D2D-49F5-994B-17BC2514ACF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D41A818B-3D2D-49F5-994B-17BC2514ACF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D41A818B-3D2D-49F5-994B-17BC2514ACF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D41A818B-3D2D-49F5-994B-17BC2514ACF3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91935FC6-ABDD-4B63-9A87-F4448D48D890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91935FC6-ABDD-4B63-9A87-F4448D48D890}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91935FC6-ABDD-4B63-9A87-F4448D48D890}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91935FC6-ABDD-4B63-9A87-F4448D48D890}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B87FF22E-DDD4-45DB-960B-4778C5B6FB01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B87FF22E-DDD4-45DB-960B-4778C5B6FB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B87FF22E-DDD4-45DB-960B-4778C5B6FB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B87FF22E-DDD4-45DB-960B-4778C5B6FB01}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06BB814B-EA11-4BF2-9DB7-B82CED08C2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{06BB814B-EA11-4BF2-9DB7-B82CED08C2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06BB814B-EA11-4BF2-9DB7-B82CED08C2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06BB814B-EA11-4BF2-9DB7-B82CED08C2FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D760521-52CC-468E-B7A7-96479DF97617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D760521-52CC-468E-B7A7-96479DF97617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D760521-52CC-468E-B7A7-96479DF97617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D760521-52CC-468E-B7A7-96479DF97617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A135F3A-DABB-4893-B203-F1E0C981A3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A135F3A-DABB-4893-B203-F1E0C981A3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A135F3A-DABB-4893-B203-F1E0C981A3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A135F3A-DABB-4893-B203-F1E0C981A3EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5048F956-7E1A-4DCB-A93D-AB335540A40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5048F956-7E1A-4DCB-A93D-AB335540A40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5048F956-7E1A-4DCB-A93D-AB335540A40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5048F956-7E1A-4DCB-A93D-AB335540A40C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

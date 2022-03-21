@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
-    <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -13,10 +13,6 @@
     <PackageReference Include="NUnit" Version="3.13.2" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Plugin\Plugin.csproj" />
   </ItemGroup>
 
 </Project>

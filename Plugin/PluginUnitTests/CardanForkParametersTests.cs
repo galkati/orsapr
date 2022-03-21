@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTests
+namespace PluginUnitTests
 {
-    internal class CardanForkParameterTests
+    internal class CardanForkParametersTests
     {
     }
 }

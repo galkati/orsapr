@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wrapper
+namespace KompasWrapper
 {
     internal class KompasConnector
     {
