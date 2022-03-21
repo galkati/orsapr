@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Plugin\Plugin.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="KAPITypes">
       <HintPath>..\KAPI\KAPITypes.dll</HintPath>
     </Reference>
@@ -23,6 +27,7 @@
     <Reference Include="KompasAPI7">
       <HintPath>..\KAPI\KompasAPI7.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
 
 </Project>

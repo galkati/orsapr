@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KompasWrapper\KompasWrapper.csproj">
+      <Project>{1a135f3a-dabb-4893-b203-f1e0c981a3ee}</Project>
+      <Name>KompasWrapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Plugin\Plugin.csproj">
       <Project>{2d760521-52cc-468e-b7a7-96479df97617}</Project>
       <Name>Plugin</Name>

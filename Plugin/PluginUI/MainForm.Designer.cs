@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.RadiusCrossTieTextBox = new System.Windows.Forms.TextBox();
+            this.WallHoleDiameterTextBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.HandleHeightTextBox = new System.Windows.Forms.TextBox();
-            this.HandleDiameterTextBox = new System.Windows.Forms.TextBox();
-            this.HeadHeightTextBox = new System.Windows.Forms.TextBox();
-            this.HeadLengthTextBox = new System.Windows.Forms.TextBox();
+            this.BaseHoleDiameterTextBox = new System.Windows.Forms.TextBox();
+            this.BaseLengthTextBox = new System.Windows.Forms.TextBox();
+            this.BaseWidthTextBox = new System.Windows.Forms.TextBox();
+            this.BaseHeightTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.HandleDiameterLabel = new System.Windows.Forms.Label();
@@ -46,24 +46,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.HeadWidthTextBox = new System.Windows.Forms.TextBox();
+            this.HeightTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BuildButton = new System.Windows.Forms.Button();
             this.MalletParametersPictureBox = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.WallThicknessTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MalletParametersPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // RadiusCrossTieTextBox
+            // WallHoleDiameterTextBox
             // 
-            this.RadiusCrossTieTextBox.Location = new System.Drawing.Point(232, 267);
-            this.RadiusCrossTieTextBox.Name = "RadiusCrossTieTextBox";
-            this.RadiusCrossTieTextBox.Size = new System.Drawing.Size(43, 20);
-            this.RadiusCrossTieTextBox.TabIndex = 39;
-            this.RadiusCrossTieTextBox.Text = "5";
+            this.WallHoleDiameterTextBox.Location = new System.Drawing.Point(232, 267);
+            this.WallHoleDiameterTextBox.Name = "WallHoleDiameterTextBox";
+            this.WallHoleDiameterTextBox.Size = new System.Drawing.Size(43, 20);
+            this.WallHoleDiameterTextBox.TabIndex = 39;
+            this.WallHoleDiameterTextBox.Text = "5";
             // 
             // label12
             // 
@@ -85,38 +85,38 @@
             this.label11.TabIndex = 37;
             this.label11.Text = "Диаметр на стенке детали(Е)";
             // 
-            // HandleHeightTextBox
+            // BaseHoleDiameterTextBox
             // 
-            this.HandleHeightTextBox.Location = new System.Drawing.Point(232, 217);
-            this.HandleHeightTextBox.Name = "HandleHeightTextBox";
-            this.HandleHeightTextBox.Size = new System.Drawing.Size(43, 20);
-            this.HandleHeightTextBox.TabIndex = 36;
-            this.HandleHeightTextBox.Text = "1";
+            this.BaseHoleDiameterTextBox.Location = new System.Drawing.Point(232, 217);
+            this.BaseHoleDiameterTextBox.Name = "BaseHoleDiameterTextBox";
+            this.BaseHoleDiameterTextBox.Size = new System.Drawing.Size(43, 20);
+            this.BaseHoleDiameterTextBox.TabIndex = 36;
+            this.BaseHoleDiameterTextBox.Text = "1";
             // 
-            // HandleDiameterTextBox
+            // BaseLengthTextBox
             // 
-            this.HandleDiameterTextBox.Location = new System.Drawing.Point(232, 167);
-            this.HandleDiameterTextBox.Name = "HandleDiameterTextBox";
-            this.HandleDiameterTextBox.Size = new System.Drawing.Size(43, 20);
-            this.HandleDiameterTextBox.TabIndex = 35;
-            this.HandleDiameterTextBox.Text = "12";
+            this.BaseLengthTextBox.Location = new System.Drawing.Point(232, 167);
+            this.BaseLengthTextBox.Name = "BaseLengthTextBox";
+            this.BaseLengthTextBox.Size = new System.Drawing.Size(43, 20);
+            this.BaseLengthTextBox.TabIndex = 35;
+            this.BaseLengthTextBox.Text = "12";
             // 
-            // HeadHeightTextBox
+            // BaseWidthTextBox
             // 
-            this.HeadHeightTextBox.Location = new System.Drawing.Point(232, 117);
-            this.HeadHeightTextBox.Name = "HeadHeightTextBox";
-            this.HeadHeightTextBox.Size = new System.Drawing.Size(43, 20);
-            this.HeadHeightTextBox.TabIndex = 34;
-            this.HeadHeightTextBox.Text = "12";
+            this.BaseWidthTextBox.Location = new System.Drawing.Point(232, 117);
+            this.BaseWidthTextBox.Name = "BaseWidthTextBox";
+            this.BaseWidthTextBox.Size = new System.Drawing.Size(43, 20);
+            this.BaseWidthTextBox.TabIndex = 34;
+            this.BaseWidthTextBox.Text = "12";
             // 
-            // HeadLengthTextBox
+            // BaseHeightTextBox
             // 
-            this.HeadLengthTextBox.BackColor = System.Drawing.Color.White;
-            this.HeadLengthTextBox.Location = new System.Drawing.Point(232, 67);
-            this.HeadLengthTextBox.Name = "HeadLengthTextBox";
-            this.HeadLengthTextBox.Size = new System.Drawing.Size(43, 20);
-            this.HeadLengthTextBox.TabIndex = 33;
-            this.HeadLengthTextBox.Text = "7";
+            this.BaseHeightTextBox.BackColor = System.Drawing.Color.White;
+            this.BaseHeightTextBox.Location = new System.Drawing.Point(232, 67);
+            this.BaseHeightTextBox.Name = "BaseHeightTextBox";
+            this.BaseHeightTextBox.Size = new System.Drawing.Size(43, 20);
+            this.BaseHeightTextBox.TabIndex = 33;
+            this.BaseHeightTextBox.Text = "7";
             // 
             // label9
             // 
@@ -208,15 +208,15 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "(от 20 до 30 мм)";
             // 
-            // HeadWidthTextBox
+            // HeightTextBox
             // 
-            this.HeadWidthTextBox.BackColor = System.Drawing.Color.Salmon;
-            this.HeadWidthTextBox.Location = new System.Drawing.Point(232, 17);
-            this.HeadWidthTextBox.Name = "HeadWidthTextBox";
-            this.HeadWidthTextBox.Size = new System.Drawing.Size(43, 20);
-            this.HeadWidthTextBox.TabIndex = 23;
-            this.HeadWidthTextBox.Text = "31";
-            this.toolTip.SetToolTip(this.HeadWidthTextBox, "Высота детали должна быть меньше 30 мм");
+            this.HeightTextBox.BackColor = System.Drawing.Color.Salmon;
+            this.HeightTextBox.Location = new System.Drawing.Point(232, 17);
+            this.HeightTextBox.Name = "HeightTextBox";
+            this.HeightTextBox.Size = new System.Drawing.Size(43, 20);
+            this.HeightTextBox.TabIndex = 23;
+            this.HeightTextBox.Text = "31";
+            this.toolTip.SetToolTip(this.HeightTextBox, "Высота детали должна быть меньше 30 мм");
             // 
             // label1
             // 
@@ -237,6 +237,7 @@
             this.BuildButton.TabIndex = 21;
             this.BuildButton.Text = "Построить";
             this.BuildButton.UseVisualStyleBackColor = true;
+            this.BuildButton.Click += new System.EventHandler(this.BuildButton_Click);
             // 
             // MalletParametersPictureBox
             // 
@@ -248,13 +249,13 @@
             this.MalletParametersPictureBox.TabIndex = 20;
             this.MalletParametersPictureBox.TabStop = false;
             // 
-            // textBox1
+            // WallThicknessTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(232, 317);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(43, 20);
-            this.textBox1.TabIndex = 42;
-            this.textBox1.Text = "2";
+            this.WallThicknessTextBox.Location = new System.Drawing.Point(232, 317);
+            this.WallThicknessTextBox.Name = "WallThicknessTextBox";
+            this.WallThicknessTextBox.Size = new System.Drawing.Size(43, 20);
+            this.WallThicknessTextBox.TabIndex = 42;
+            this.WallThicknessTextBox.Text = "2";
             // 
             // label5
             // 
@@ -262,9 +263,9 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label5.Location = new System.Drawing.Point(12, 332);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 15);
+            this.label5.Size = new System.Drawing.Size(87, 15);
             this.label5.TabIndex = 41;
-            this.label5.Text = "(от 2 до 6мм)";
+            this.label5.Text = "(от 2 до 6 мм)";
             // 
             // label7
             // 
@@ -272,9 +273,9 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.Location = new System.Drawing.Point(9, 317);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 15);
+            this.label7.Size = new System.Drawing.Size(160, 15);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Диаметр на стенке детали(Ж)";
+            this.label7.Text = "Ширина стенки детали(Ж)";
             // 
             // toolTip
             // 
@@ -285,16 +286,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 428);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.WallThicknessTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.RadiusCrossTieTextBox);
+            this.Controls.Add(this.WallHoleDiameterTextBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.HandleHeightTextBox);
-            this.Controls.Add(this.HandleDiameterTextBox);
-            this.Controls.Add(this.HeadHeightTextBox);
-            this.Controls.Add(this.HeadLengthTextBox);
+            this.Controls.Add(this.BaseHoleDiameterTextBox);
+            this.Controls.Add(this.BaseLengthTextBox);
+            this.Controls.Add(this.BaseWidthTextBox);
+            this.Controls.Add(this.BaseHeightTextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.HandleDiameterLabel);
@@ -304,7 +305,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.HeadWidthTextBox);
+            this.Controls.Add(this.HeightTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BuildButton);
             this.Controls.Add(this.MalletParametersPictureBox);
@@ -319,13 +320,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox RadiusCrossTieTextBox;
+        private System.Windows.Forms.TextBox WallHoleDiameterTextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox HandleHeightTextBox;
-        private System.Windows.Forms.TextBox HandleDiameterTextBox;
-        private System.Windows.Forms.TextBox HeadHeightTextBox;
-        private System.Windows.Forms.TextBox HeadLengthTextBox;
+        private System.Windows.Forms.TextBox BaseHoleDiameterTextBox;
+        private System.Windows.Forms.TextBox BaseLengthTextBox;
+        private System.Windows.Forms.TextBox BaseWidthTextBox;
+        private System.Windows.Forms.TextBox BaseHeightTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label HandleDiameterLabel;
@@ -335,11 +336,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox HeadWidthTextBox;
+        private System.Windows.Forms.TextBox HeightTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BuildButton;
         private System.Windows.Forms.PictureBox MalletParametersPictureBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox WallThicknessTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ToolTip toolTip;

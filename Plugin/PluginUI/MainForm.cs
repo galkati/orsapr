@@ -16,5 +16,10 @@ namespace PluginUI
         {
             InitializeComponent();
         }
+
+        private void BuildButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
