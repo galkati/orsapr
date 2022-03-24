@@ -63,7 +63,8 @@
             this.WallHoleDiameterTextBox.Name = "WallHoleDiameterTextBox";
             this.WallHoleDiameterTextBox.Size = new System.Drawing.Size(43, 20);
             this.WallHoleDiameterTextBox.TabIndex = 39;
-            this.WallHoleDiameterTextBox.Text = "5";
+            this.WallHoleDiameterTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            this.WallHoleDiameterTextBox.Validated += new System.EventHandler(this.TextBox_Validated);
             // 
             // label12
             // 
@@ -91,7 +92,8 @@
             this.BaseHoleDiameterTextBox.Name = "BaseHoleDiameterTextBox";
             this.BaseHoleDiameterTextBox.Size = new System.Drawing.Size(43, 20);
             this.BaseHoleDiameterTextBox.TabIndex = 36;
-            this.BaseHoleDiameterTextBox.Text = "1";
+            this.BaseHoleDiameterTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            this.BaseHoleDiameterTextBox.Validated += new System.EventHandler(this.TextBox_Validated);
             // 
             // BaseLengthTextBox
             // 
@@ -99,7 +101,8 @@
             this.BaseLengthTextBox.Name = "BaseLengthTextBox";
             this.BaseLengthTextBox.Size = new System.Drawing.Size(43, 20);
             this.BaseLengthTextBox.TabIndex = 35;
-            this.BaseLengthTextBox.Text = "12";
+            this.BaseLengthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            this.BaseLengthTextBox.Validated += new System.EventHandler(this.TextBox_Validated);
             // 
             // BaseWidthTextBox
             // 
@@ -107,7 +110,8 @@
             this.BaseWidthTextBox.Name = "BaseWidthTextBox";
             this.BaseWidthTextBox.Size = new System.Drawing.Size(43, 20);
             this.BaseWidthTextBox.TabIndex = 34;
-            this.BaseWidthTextBox.Text = "12";
+            this.BaseWidthTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            this.BaseWidthTextBox.Validated += new System.EventHandler(this.TextBox_Validated);
             // 
             // BaseHeightTextBox
             // 
@@ -116,7 +120,8 @@
             this.BaseHeightTextBox.Name = "BaseHeightTextBox";
             this.BaseHeightTextBox.Size = new System.Drawing.Size(43, 20);
             this.BaseHeightTextBox.TabIndex = 33;
-            this.BaseHeightTextBox.Text = "7";
+            this.BaseHeightTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            this.BaseHeightTextBox.Validated += new System.EventHandler(this.TextBox_Validated);
             // 
             // label9
             // 
@@ -210,13 +215,14 @@
             // 
             // HeightTextBox
             // 
-            this.HeightTextBox.BackColor = System.Drawing.Color.Salmon;
+            this.HeightTextBox.BackColor = System.Drawing.Color.White;
             this.HeightTextBox.Location = new System.Drawing.Point(232, 17);
             this.HeightTextBox.Name = "HeightTextBox";
             this.HeightTextBox.Size = new System.Drawing.Size(43, 20);
             this.HeightTextBox.TabIndex = 23;
-            this.HeightTextBox.Text = "31";
             this.toolTip.SetToolTip(this.HeightTextBox, "Высота детали должна быть меньше 30 мм");
+            this.HeightTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            this.HeightTextBox.Validated += new System.EventHandler(this.TextBox_Validated);
             // 
             // label1
             // 
@@ -230,7 +236,6 @@
             // 
             // BuildButton
             // 
-            this.BuildButton.Enabled = false;
             this.BuildButton.Location = new System.Drawing.Point(12, 366);
             this.BuildButton.Name = "BuildButton";
             this.BuildButton.Size = new System.Drawing.Size(214, 23);
@@ -255,7 +260,8 @@
             this.WallThicknessTextBox.Name = "WallThicknessTextBox";
             this.WallThicknessTextBox.Size = new System.Drawing.Size(43, 20);
             this.WallThicknessTextBox.TabIndex = 42;
-            this.WallThicknessTextBox.Text = "2";
+            this.WallThicknessTextBox.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox_Validating);
+            this.WallThicknessTextBox.Validated += new System.EventHandler(this.TextBox_Validated);
             // 
             // label5
             // 

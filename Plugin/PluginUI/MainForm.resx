@@ -124,7 +124,7 @@
   <data name="MalletParametersPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASYAAAMhCAIAAADKPIscAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAantJREFUeF7tnQdYFEf7wIkmllgSe4saezRGE03UFGOin5rk06jRJIq9oYklsQaN
+        vAAADrwBlbxySQAAantJREFUeF7tnQdYFEf7wIkmllgSe4saezRGE03UFGOin5rk06jRJIq9oYklsQaN
         HXuPDcXCJ4oURUUpNkQRG4KoiBQVEBApUlSkCML/lRn3fwFu2bkt7N69v4eHZ9/Zvd3Z2fntzNze7prl
         IwiiIKgcgigKKocgioLKIYiioHIIoiioHIIoCiqHIIqCyiGIoqByiDZ4+vTpnj17oqKiaJyff/z4cU9P
         Txrk54eFhe3YsSM7O5vG7AQEBDg7O+fl5dFYHlA5RBvcunXLzMzMycmJhI8ePWrevPmCBQtImJCQ8Mkn
@@ -581,7 +581,4 @@
         E5VDEEVB5RBEUVA5BFEUVA5BFAWVQxBFQeUQREHy8/8Ppr+GkLbw13QAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>
