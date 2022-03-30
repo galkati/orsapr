@@ -76,7 +76,7 @@ namespace Plugin
         /// Минимальные значения являются дефолтными
         /// </summary>
         public const double MIN_BASE_HEIGHT = 7;
-        public const double MAX_BASE_HEIGHT = 14;
+        public const double MAX_BASE_HEIGHT = 13;
 
         public const double MIN_BASE_HOLE_DIAMETER = 1;
         public const double MAX_BASE_HOLE_DIAMETER = 5;
@@ -212,7 +212,7 @@ namespace Plugin
         /// </summary>
         /// <param name="name">Имя параметра</param>
         /// <param name="value">Значение</param>
-        public void SetParameterByName(ParameterNames name, int value)
+        public void SetParameterByName(ParameterNames name, double value)
         {
             if (_parametersDictionary.ContainsKey(name))
             {
