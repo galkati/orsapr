@@ -131,7 +131,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 15);
             this.label9.TabIndex = 32;
-            this.label9.Text = "(от 2 до 5 мм)";
+            this.label9.Text = "(от 1 до 5 мм)";
             // 
             // label10
             // 

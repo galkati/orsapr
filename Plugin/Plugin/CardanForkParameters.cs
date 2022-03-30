@@ -11,57 +11,56 @@ namespace Plugin
         /// <summary>
         /// Высота основания
         /// </summary>
-        private static Parameter<int> _baseHeight = 
-            new Parameter<int>(ParameterNames.BaseHeight,
+        private static Parameter<double> _baseHeight = 
+            new Parameter<double>(ParameterNames.BaseHeight,
                 MAX_BASE_HEIGHT, MIN_BASE_HEIGHT);
 
         /// <summary>
         /// Диаметр отверстия в основании
         /// </summary>
-        private static Parameter<int> _baseHoleDiameter = 
-            new Parameter<int>(ParameterNames.BaseHoleDiameter,
+        private static Parameter<double> _baseHoleDiameter = 
+            new Parameter<double>(ParameterNames.BaseHoleDiameter,
                 MAX_BASE_HOLE_DIAMETER, MIN_BASE_HOLE_DIAMETER);
 
         /// <summary>
         /// Ширина основания
         /// </summary>
-        private static Parameter<int> _baseWidth =
-                new Parameter<int>(ParameterNames.BaseWidth,
+        private static Parameter<double> _baseWidth =
+                new Parameter<double>(ParameterNames.BaseWidth,
                     MAX_BASE_WIDTH, MIN_BASE_WIDTH);
 
         /// <summary>
         /// Длина основания
         /// </summary>
-        private static Parameter<int> _baseLength = 
-                new Parameter<int>(ParameterNames.BaseLength,
+        private static Parameter<double> _baseLength = 
+                new Parameter<double>(ParameterNames.BaseLength,
                     MAX_BASE_LENGTH, MIN_BASE_LENGTH);
 
         /// <summary>
         /// Высота детали
         /// </summary>
-        private static Parameter<int> _height = new Parameter<int>(
+        private static Parameter<double> _height = new Parameter<double>(
             ParameterNames.Height, MAX_HEIGHT,MIN_HEIGHT);
 
         /// <summary>
         /// Диаметр на стенке детали
         /// </summary>
-        private static Parameter<int> _wallHoleDiameter = 
-                new Parameter<int>(ParameterNames.WallHoleDiameter,
+        private static Parameter<double> _wallHoleDiameter = 
+                new Parameter<double>(ParameterNames.WallHoleDiameter,
                     MAX_WALL_HOLE_DIAMETER, MIN_WALL_HOLE_DIAMETER);
 
         /// <summary>
         /// Ширина стенки детали
         /// </summary>
-        private static Parameter<int> _wallThickness =
-                new Parameter<int>(ParameterNames.WallThickness,
+        private static Parameter<double> _wallThickness =
+                new Parameter<double>(ParameterNames.WallThickness,
                     MAX_WALL_THICKNESS, MIN_WALL_THICKNESS);
 
         /// <summary>
         /// Словарь содержащий пары (Имя параметра, указатель на него)
         /// </summary>
-        private Dictionary<ParameterNames, Parameter<int>>
-            _parametersDictionary =
-                new Dictionary<ParameterNames, Parameter<int>>
+        private Dictionary<ParameterNames, Parameter<double>>
+            _parametersDictionary = new()
                 {
                     {_baseHeight.Name, _baseHeight},
                     {_baseHoleDiameter.Name, _baseHoleDiameter},
@@ -76,26 +75,26 @@ namespace Plugin
         /// Конастанты минимальных и максимальных значений параметров в мм
         /// Минимальные значения являются дефолтными
         /// </summary>
-        public const int MIN_BASE_HEIGHT = 7;
-        public const int MAX_BASE_HEIGHT = 14;
+        public const double MIN_BASE_HEIGHT = 7;
+        public const double MAX_BASE_HEIGHT = 14;
 
-        public const int MIN_BASE_HOLE_DIAMETER = 2;
-        public const int MAX_BASE_HOLE_DIAMETER = 5;
+        public const double MIN_BASE_HOLE_DIAMETER = 1;
+        public const double MAX_BASE_HOLE_DIAMETER = 5;
 
-        public const int MIN_BASE_WIDTH = 12;
-        public const int MAX_BASE_WIDTH = 22;
+        public const double MIN_BASE_WIDTH = 12;
+        public const double MAX_BASE_WIDTH = 22;
 
-        public const int MIN_BASE_LENGTH = 12;
-        public const int MAX_BASE_LENGTH = 22;
+        public const double MIN_BASE_LENGTH = 12;
+        public const double MAX_BASE_LENGTH = 22;
 
-        public const int MIN_HEIGHT = 20;
-        public const int MAX_HEIGHT = 30;
+        public const double MIN_HEIGHT = 20;
+        public const double MAX_HEIGHT = 30;
 
-        public const int MIN_WALL_HOLE_DIAMETER = 5;
-        public const int MAX_WALL_HOLE_DIAMETER = 11;
+        public const double MIN_WALL_HOLE_DIAMETER = 5;
+        public const double MAX_WALL_HOLE_DIAMETER = 11;
 
-        public const int MIN_WALL_THICKNESS = 2;
-        public const int MAX_WALL_THICKNESS = 5;
+        public const double MIN_WALL_THICKNESS = 2;
+        public const double MAX_WALL_THICKNESS = 5;
 
         /// <summary>
         /// Константы ограничений для параметров
@@ -119,7 +118,7 @@ namespace Plugin
         /// <summary>
         /// Задаёт или возвращает высоту основания
         /// </summary>
-        public int BaseHeight
+        public double BaseHeight
         {
             get => _baseHeight.Value;
             set => _baseHeight.Value = value;
@@ -128,7 +127,7 @@ namespace Plugin
         /// <summary>
         /// Задаёт или возвращает диаметр отверстия в основании
         /// </summary>
-        public int BaseHoleDiameter
+        public double BaseHoleDiameter
         {
             get => _baseHoleDiameter.Value;
             set => _baseHoleDiameter.Value = value;
@@ -137,7 +136,7 @@ namespace Plugin
         /// <summary>
         /// Задаёт или возвращает ширина основания
         /// </summary>
-        public int BaseWidth
+        public double BaseWidth
         {
             get => _baseWidth.Value;
             set
@@ -159,7 +158,7 @@ namespace Plugin
         /// <summary>
         /// Задаёт или возвращает высоту основания
         /// </summary>
-        public int BaseLength
+        public double BaseLength
         {
             get => _baseLength.Value;
             set
@@ -176,7 +175,7 @@ namespace Plugin
         /// <summary>
         /// Задаёт или возвращает высоту детали
         /// </summary>
-        public int Height
+        public double Height
         {
             get => _height.Value;
             set => _height.Value = value;
@@ -185,7 +184,7 @@ namespace Plugin
         /// <summary>
         /// Задаёт или возвращает диаметр на стенке детали
         /// </summary>
-        public int WallHoleDiameter
+        public double WallHoleDiameter
         {
             get => _wallHoleDiameter.Value;
             set
@@ -202,7 +201,7 @@ namespace Plugin
         /// <summary>
         /// Задаёт или возвращает ширина стенки детали
         /// </summary>
-        public int WallThickness
+        public double WallThickness
         {
             get => _wallThickness.Value;
             set => _wallThickness.Value = value;
@@ -242,7 +241,7 @@ namespace Plugin
         /// </summary>
         /// <param name="name">Имя</param>
         /// <returns>Значение</returns>
-        public int GetParameterValueByName(ParameterNames name)
+        public double GetParameterValueByName(ParameterNames name)
         {
             _parametersDictionary.TryGetValue(name, out var parameter);
             return parameter.Value;

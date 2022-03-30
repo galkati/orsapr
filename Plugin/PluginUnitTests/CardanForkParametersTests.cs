@@ -17,7 +17,7 @@ namespace UnitTests
         /// <summary>
         /// Словарь имён и максимальных значений параметров
         /// </summary>
-        private readonly Dictionary<ParameterNames, int>
+        private readonly Dictionary<ParameterNames, double>
             _maxValuesOfParameterDictionary =
                 new()
                 {
