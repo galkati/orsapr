@@ -94,11 +94,15 @@ namespace PluginUI
                 {
                     BaseWidthTextBox.Text =
                         _cardanForkParameters.BaseWidth.ToString();
+                    WallHoleDiameterTextBox.Text =
+                        _cardanForkParameters.WallHoleDiameter.ToString();
                 }
                 else if (textBox == WallHoleDiameterTextBox)
                 {
                     BaseWidthTextBox.Text =
                         _cardanForkParameters.BaseWidth.ToString();
+                    BaseLengthTextBox.Text =
+                        _cardanForkParameters.BaseLength.ToString();
                 }
             }
             catch (Exception exception)

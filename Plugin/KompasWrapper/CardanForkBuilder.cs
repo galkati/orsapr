@@ -24,14 +24,9 @@ namespace KompasWrapper
         private const int MainLineStyle = 1;
 
         /// <summary>
-        /// Размер выступа ручки из бойка для визуального понимания
-        /// </summary>
-        private const int HandleLedge = 1;
-
-        /// <summary>
         /// Конструктор класса
         /// </summary>
-        /// <param name="parameters">Параметры киянки</param>
+        /// <param name="parameters">Параметры карданной вилки</param>
         /// <param name="connector">Объект для связи с КОМПАС-3D</param>
         public CardanForkBuilder(CardanForkParameters parameters,
             KompasConnector connector)
@@ -45,6 +40,51 @@ namespace KompasWrapper
         /// </summary>
         public void BuildCardanFork()
         {
+            _connector.Start();
+            _connector.CreateDocument3D();
+
+            //Создание детали без отверстий и вырезов
+            var sketch = CreateSketch(Obj3dType.o3d_planeXOZ, null);
+            var doc2d = (ksDocument2D)sketch.BeginEdit();
+            doc2d.ksRectangle(DrawRectangle(0, 0,
+                _parameters.BaseWidth,
+                _parameters.Height- _parameters.BaseWidth / 2));
+            doc2d.ksCircle(_parameters.Height - _parameters.BaseWidth / 2,
+                _parameters.BaseWidth / 2, _parameters.BaseWidth / 2,
+                MainLineStyle);
+            sketch.EndEdit();
+            СreateExtrusion(sketch, _parameters.BaseLength);
+
+            //Вырез деаметра на стенке детали
+            sketch = CreateSketch(Obj3dType.o3d_planeXOZ,
+                null);
+            doc2d = (ksDocument2D)sketch.BeginEdit();
+            doc2d.ksCircle(_parameters.Height - _parameters.BaseWidth / 2,
+                _parameters.BaseWidth / 2, _parameters.WallHoleDiameter / 2,
+                MainLineStyle);
+            sketch.EndEdit();
+            СreateCutExtrusion(sketch, _parameters.BaseLength, false);
+
+            //Вырез пространства из середины
+            sketch = CreateSketch(Obj3dType.o3d_planeXOY,
+                null);
+            doc2d = (ksDocument2D)sketch.BeginEdit();
+            doc2d.ksRectangle(DrawRectangle(_parameters.BaseHeight,
+                _parameters.WallThickness,
+                _parameters.BaseLength - _parameters.WallThickness * 2,
+                _parameters.Height - _parameters.BaseHeight));
+            sketch.EndEdit();
+            СreateCutExtrusion(sketch, _parameters.BaseLength);
+
+            //Вырез отверстия в основании
+            sketch = CreateSketch(Obj3dType.o3d_planeYOZ,
+                null);
+            doc2d = (ksDocument2D)sketch.BeginEdit();
+            doc2d.ksCircle(_parameters.BaseLength/2,
+                -_parameters.BaseWidth / 2, _parameters.BaseHoleDiameter/2,
+                MainLineStyle);
+            sketch.EndEdit();
+            СreateCutExtrusion(sketch, _parameters.BaseHeight);
         }
 
         /// <summary>
@@ -90,6 +130,31 @@ namespace KompasWrapper
             extrusionDef.SetSketch(sketch);
 
             extrusionEntity.Create();
+        }
+
+        /// <summary>
+        /// Метод осуществляющий вырезание
+        /// </summary>
+        /// <param name="sketch">Эскиз</param>
+        /// <param name="depth">Расстояние выреза</param>
+        private void СreateCutExtrusion(ksSketchDefinition sketch,
+            double depth, bool side = true)
+        {
+            var cutExtrusionEntity = (ksEntity)_connector.Part.NewEntity(
+                (short)ksObj3dTypeEnum.o3d_cutExtrusion);
+            var cutExtrusionDef =
+                (ksCutExtrusionDefinition)cutExtrusionEntity
+                    .GetDefinition();
+
+            cutExtrusionDef.SetSideParam(side,
+                (short)End_Type.etBlind, depth);
+            cutExtrusionDef.directionType = side ?
+                (short)Direction_Type.dtNormal :
+                (short)Direction_Type.dtReverse;
+            cutExtrusionDef.cut = true;
+            cutExtrusionDef.SetSketch(sketch);
+
+            cutExtrusionEntity.Create();
         }
 
         /// <summary>

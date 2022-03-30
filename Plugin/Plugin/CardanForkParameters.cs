@@ -77,9 +77,9 @@ namespace Plugin
         /// Минимальные значения являются дефолтными
         /// </summary>
         public const int MIN_BASE_HEIGHT = 7;
-        public const int MAX_BASE_HEIGHT = 17;
+        public const int MAX_BASE_HEIGHT = 14;
 
-        public const int MIN_BASE_HOLE_DIAMETER = 1;
+        public const int MIN_BASE_HOLE_DIAMETER = 2;
         public const int MAX_BASE_HOLE_DIAMETER = 5;
 
         public const int MIN_BASE_WIDTH = 12;
@@ -95,7 +95,7 @@ namespace Plugin
         public const int MAX_WALL_HOLE_DIAMETER = 11;
 
         public const int MIN_WALL_THICKNESS = 2;
-        public const int MAX_WALL_THICKNESS = 6;
+        public const int MAX_WALL_THICKNESS = 5;
 
         /// <summary>
         /// Константы ограничений для параметров
@@ -140,7 +140,20 @@ namespace Plugin
         public int BaseWidth
         {
             get => _baseWidth.Value;
-            set => _baseWidth.Value = value;
+            set
+            {
+                _baseWidth.Value = value;
+
+                if (_baseLength.Value != value)
+                {
+                    BaseLength = value;
+                }
+
+                if (_wallHoleDiameter.Value > value - WIDTH_DIAMETER_DIFFERENCE)
+                {
+                    WallHoleDiameter = value - WIDTH_DIAMETER_DIFFERENCE;
+                }
+            }
         }
 
         /// <summary>
@@ -149,7 +162,15 @@ namespace Plugin
         public int BaseLength
         {
             get => _baseLength.Value;
-            set => _baseLength.Value = value;
+            set
+            {
+                _baseLength.Value = value;
+
+                if (_baseWidth.Value != value)
+                {
+                    BaseWidth = value;
+                }
+            }
         }
 
         /// <summary>
@@ -167,7 +188,15 @@ namespace Plugin
         public int WallHoleDiameter
         {
             get => _wallHoleDiameter.Value;
-            set => _wallHoleDiameter.Value = value;
+            set
+            {
+                _wallHoleDiameter.Value = value;
+
+                if (value > _baseWidth.Value - WIDTH_DIAMETER_DIFFERENCE)
+                {
+                    BaseWidth = value + WIDTH_DIAMETER_DIFFERENCE;
+                }
+            }
         }
 
         /// <summary>
@@ -193,8 +222,8 @@ namespace Plugin
                     case ParameterNames.BaseWidth:
                         BaseWidth = value;
                         break;
-                    case ParameterNames.BaseHeight:
-                        BaseHeight = value;
+                    case ParameterNames.BaseLength:
+                        BaseLength = value;
                         break;
                     case ParameterNames.WallHoleDiameter:
                         WallHoleDiameter = value;

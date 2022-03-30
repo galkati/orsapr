@@ -131,7 +131,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 15);
             this.label9.TabIndex = 32;
-            this.label9.Text = "(от 1 до 5 мм)";
+            this.label9.Text = "(от 2 до 5 мм)";
             // 
             // label10
             // 
@@ -191,7 +191,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 15);
             this.label3.TabIndex = 26;
-            this.label3.Text = "(от 7 до 17 мм)";
+            this.label3.Text = "(от 7 до 14 мм)";
             // 
             // label4
             // 
@@ -271,7 +271,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 15);
             this.label5.TabIndex = 41;
-            this.label5.Text = "(от 2 до 6 мм)";
+            this.label5.Text = "(от 2 до 5 мм)";
             // 
             // label7
             // 
